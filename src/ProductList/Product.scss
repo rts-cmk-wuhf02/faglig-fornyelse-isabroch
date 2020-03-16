@@ -1,0 +1,60 @@
+.product-card {
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(9, 0, 31, 0.1);
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__details {
+    padding: 5px 15px 10px;
+    display: grid;
+    gap: 0 0.5em;
+    grid-template: "name name" auto "price actions" auto / 1fr auto;
+    align-items: stretch;
+  }
+
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    grid-area: name;
+    line-height: 2;
+  }
+
+  &__price {
+    grid-area: price;
+    align-self: center;
+  }
+
+  &__quantity {
+    flex: 1;
+    margin-right: 5px;
+  }
+
+  &__actions {
+    display: flex;
+    grid-area: actions;
+    max-width: 100px;
+    justify-self: end;
+  }
+
+  &__button {
+    flex: 1;
+    border: 0;
+    background-color: rgb(184, 212, 117);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+
+    &:hover, &:focus {
+      background-color: rgb(157, 209, 107);
+    }
+
+    &:active {
+      background-color: rgb(116, 190, 87);
+    }
+  }
+}
