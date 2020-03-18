@@ -9,7 +9,7 @@ class Grid extends React.Component {
   render() {
     return (
       <ul className="grid">
-        { this.props.children.map(el => (
+        { React.Children.map(this.props.children, el => (
           <li className="grid__item">{el}</li>
         )) }
       </ul>
