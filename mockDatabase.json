@@ -1,0 +1,62 @@
+{ "products": [
+  {
+    "id": "PR001",
+    "name": "Tripplesolocom",
+    "price": 55723,
+    "stock": 64
+  },
+  {
+    "id": "PR002",
+    "name": "Vilatodex",
+    "price": 56527,
+    "stock": 6
+  },
+  {
+    "id": "PR003",
+    "name": "Green dannix",
+    "price": 95988,
+    "stock": 97
+  },
+  {
+    "id": "PR004",
+    "name": "Zam-dub",
+    "price": 78777,
+    "stock": 56
+  },
+  {
+    "id": "PR005",
+    "name": "Key ovehold",
+    "price": 96103,
+    "stock": 33
+  },
+  {
+    "id": "PR006",
+    "name": "Tough-din",
+    "price": 12057,
+    "stock": 68
+  },
+  {
+    "id": "PR007",
+    "name": "Onto sailtech",
+    "price": 42338,
+    "stock": 95
+  },
+  {
+    "id": "PR008",
+    "name": "Ecofax",
+    "price": 98687,
+    "stock": 81
+  },
+  {
+    "id": "PR009",
+    "name": "Rankzumcof",
+    "price": 38223,
+    "stock": 30
+  },
+  {
+    "id": "PR010",
+    "name": "Dentofind",
+    "price": 37375,
+    "stock": 52
+  }
+]}
