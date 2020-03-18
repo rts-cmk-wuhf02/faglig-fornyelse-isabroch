@@ -83,11 +83,5 @@
       background-color: rgb(116, 190, 87);
     }
 
-    &--disabled {
-      pointer-events: none;
-      background: rgb(189, 189, 189);
-      cursor: not-allowed;
-    }
-
   }
 }
