@@ -30,7 +30,7 @@
     text-overflow: ellipsis;
 
     .product-card--no-stock & {
-      grid-template-columns: 1fr auto;
+      grid-template-columns: auto auto;
       display: grid;
     }
   }

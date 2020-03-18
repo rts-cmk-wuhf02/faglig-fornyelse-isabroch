@@ -1,16 +1,10 @@
 import React from 'react';
 import './App.scss';
-import Product from './ProductList/Product'
-import Grid from './ProductList/Grid';
+import ProductList from './ProductList/ProductList'
 
 function App() {
   return (
-    <Grid>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-    </Grid>
+    <ProductList />
   );
 }
 
