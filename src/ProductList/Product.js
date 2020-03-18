@@ -15,12 +15,20 @@ class Product extends React.Component {
     this.setState({ purchasingQuantity: value });
   };
 
+  callUpdateCart = event => {
+    this.props.updateCart(this.props.productId, this.state.purchasingQuantity);
+    this.setState({purchasingQuantity: 0 });
+  };
+
   render() {
+    const hasNoQuantitySelected = this.state.purchasingQuantity === 0;
+    const isOutOfStock = this.props.productStock === 0;
+
     return (
       <article
-        className={
-          `product-card ${this.props.productStock === 0 ? "product-card--no-stock" : ""}`.trim()
-        }
+        className={`product-card ${
+          isOutOfStock ? "product-card--no-stock" : ""
+        }`.trim()}
       >
         <img
           src={`https://picsum.photos/seed/${this.props.productId}/300/200`}
@@ -32,7 +40,7 @@ class Product extends React.Component {
         <div className="product-card__details">
           <h3 className="product-card__title">
             <span className="product-card__name">{this.props.productName}</span>
-            {this.props.productStock === 0 && (
+            {isOutOfStock && (
               <span className="product-card__stock-status">
                 &nbsp;- out of stock
               </span>
@@ -43,13 +51,21 @@ class Product extends React.Component {
           </strong>
           <div className="product-card__actions">
             <InputNumber
+              precision={0}
               min={0}
               max={this.props.productStock}
               className="product-card__quantity"
               value={this.state.purchasingQuantity}
               onChange={this.handleChange}
+              tabIndex={isOutOfStock ? -1 : 0}
             />
-            <button className="product-card__button">
+            <button
+              className={`product-card__button ${
+                hasNoQuantitySelected ? "product-card__button--disabled" : ""
+              }`.trim()}
+              onClick={this.callUpdateCart}
+              tabIndex={hasNoQuantitySelected ? -1 : 0}
+            >
               <i className="fas fa-cart-plus"></i>
             </button>
           </div>

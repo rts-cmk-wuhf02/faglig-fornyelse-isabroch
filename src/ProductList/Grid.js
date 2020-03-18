@@ -2,10 +2,6 @@ import React from 'react';
 import './Grid.scss';
 
 class Grid extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <ul className="grid">
