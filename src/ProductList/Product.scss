@@ -3,6 +3,12 @@
   border-radius: 3px;
   box-shadow: 2px 2px 4px rgba(9, 0, 31, 0.1);
 
+  &--no-stock {
+    background: rgb(240, 240, 240);
+    filter: grayscale(1);
+    opacity: 0.9;
+  }
+
   &__image {
     width: 100%;
     height: auto;
@@ -16,12 +22,28 @@
     align-items: stretch;
   }
 
-  &__name {
-    overflow: hidden;
-    text-overflow: ellipsis;
+  &__title {
     white-space: nowrap;
     grid-area: name;
     line-height: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .product-card--no-stock & {
+      grid-template-columns: 1fr auto;
+      display: grid;
+    }
+  }
+
+  &__name {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+  }
+
+  &__stock-status {
+    font-weight: bold;
+    font-style: italic;
   }
 
   &__price {
@@ -29,16 +51,19 @@
     align-self: center;
   }
 
-  &__quantity {
-    flex: 1;
-    margin-right: 5px;
-  }
-
   &__actions {
     display: flex;
     grid-area: actions;
     max-width: 100px;
     justify-self: end;
+    .product-card--no-stock & {
+      pointer-events: none;
+    }
+  }
+
+  &__quantity {
+    flex: 1;
+    margin-right: 5px;
   }
 
   &__button {
@@ -49,7 +74,8 @@
     cursor: pointer;
     transition: background-color 0.1s ease;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: rgb(157, 209, 107);
     }
 
