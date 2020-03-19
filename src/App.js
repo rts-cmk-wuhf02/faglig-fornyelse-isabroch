@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import "./App.scss";
 import ProductList from "./ProductList/ProductList";
@@ -45,11 +45,13 @@ export class App extends Component {
         id: productId,
         quantity: purchasingQuantity
       });
-    } else {
+    } else if (purchasingQuantity > 0) {
       const updatedQuantity = isAbsolute
         ? purchasingQuantity
         : cartData[orderNumber].quantity + purchasingQuantity;
       cartData[orderNumber].quantity = updatedQuantity;
+    } else if (purchasingQuantity === 0) {
+      cartData.splice(orderNumber, 1);
     }
 
     this.setState({ cart: cartData });
@@ -59,7 +61,11 @@ export class App extends Component {
     return (
       <main className="app-container">
         <section className="box cart-list">
-          <Cart></Cart>
+          <Cart
+            products={this.state.products}
+            cart={this.state.cart}
+            updateCart={this.updateCart}
+          />
         </section>
         <section className="box product-list">
           <ProductList

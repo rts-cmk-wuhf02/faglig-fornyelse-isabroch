@@ -8,7 +8,6 @@ class Product extends Component {
     super(props);
     this.state = {
       purchasingQuantity: 1,
-      availableStock: this.props.existingStock
     };
   }
 
@@ -19,12 +18,14 @@ class Product extends Component {
   callUpdateCart = () => {
     this.props.updateCart(this.props.productId, this.state.purchasingQuantity);
     this.setState({purchasingQuantity: 1});
-
-    this.setState((state, props) => ({availableStock: props.existingStock - props.reservedStock}))
   };
 
+  getAvailableStock = () => {
+    return this.props.existingStock - this.props.reservedStock;
+  }
+
   render() {
-    const isOutOfStock = this.state.availableStock === 0;
+    const isOutOfStock = this.getAvailableStock() === 0;
 
     return (
       <article
@@ -55,7 +56,7 @@ class Product extends Component {
             <InputNumber
               precision={0}
               min={1}
-              max={this.state.availableStock}
+              max={this.getAvailableStock()}
               className="product-card__quantity"
               value={this.state.purchasingQuantity}
               onChange={this.updatePurchasingQuantity}
