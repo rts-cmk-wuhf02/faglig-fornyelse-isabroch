@@ -50,7 +50,7 @@ class Product extends Component {
             )}
           </h3>
           <strong className="product-card__price">
-            {this.props.productPrice} kr
+            {this.props.productPrice}
           </strong>
           <div className="product-card__actions">
             <InputNumber
