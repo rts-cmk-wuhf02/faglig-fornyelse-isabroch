@@ -89,9 +89,11 @@ class CartCallToAction extends Component {
 
     for (let i = 0; i < this.props.cart.length; i++) {
       const { id, quantity } = this.props.cart[i];
-      const { price } = this.props.products.filter(product => product.id == id)[0];
+      const { price } = this.props.products.filter(
+        product => product.id == id
+      )[0];
 
-      totalPrice += (price * quantity);
+      totalPrice += price * quantity;
     }
 
     return totalPrice;
@@ -100,11 +102,13 @@ class CartCallToAction extends Component {
   render() {
     return (
       <div className="cart-cta">
-        <h2 className="cart-cta__title">
-          Samlet beløb <span className="cart-cta__subtext">inkl. moms</span>
-        </h2>
-        <div className="cart-cta__price">
-          {priceToString(this.totalPrice())}
+        <div className="cart-cta__price-section">
+          <h2 className="cart-cta__title">
+            Samlet beløb <span className="cart-cta__subtext">inkl. moms</span>
+          </h2>
+          <div className="cart-cta__price">
+            {priceToString(this.totalPrice())}
+          </div>
         </div>
         <button className="cart-cta__button">Buy me!</button>
       </div>
@@ -122,7 +126,9 @@ export default class Cart extends Component {
 
     return (
       <section className="box cart">
+        <div className="cart-items-container">
         <CartItems {...this.props} />
+        </div>
         <CartCallToAction {...this.props} />
       </section>
     );
