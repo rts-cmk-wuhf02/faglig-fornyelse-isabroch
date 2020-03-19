@@ -11,3 +11,12 @@
   padding: 5px 15px;
   margin: var(--cartGap) 0;
 }
+
+.cart-list {
+  max-height: calc(100vh - var(--spacingL) * 2);
+
+  @media screen and (min-width: 788px) {
+    top: var(--spacingM);
+    position: sticky;
+  }
+}
