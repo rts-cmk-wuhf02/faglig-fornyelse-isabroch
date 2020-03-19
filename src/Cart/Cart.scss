@@ -1,7 +1,13 @@
+.cart {
+  --cartGap: var(--spacingM);
+  margin: calc(-1 * var(--cartGap)) 0;
+}
+
 .cart-item {
   display: block;
   background: white;
   border-radius: var(--cornerRadius);
   box-shadow: 2px 2px 4px rgba(9, 0, 31, 0.1);
   padding: 5px 15px;
+  margin: var(--cartGap) 0;
 }
