@@ -4,7 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: flex-end;
-  padding: var(--spacingL) var(--spacingM);
+  padding: var(--spacingM) var(--spacingM);
 }
 
 .product-list {
@@ -21,5 +21,5 @@
   background: var(--componentBackground);
   padding: var(--spacingL);
   border-radius: var(--cornerRadius);
-  margin: var(--spacingS);
+  margin: var(--spacingM) var(--spacingS);
 }
