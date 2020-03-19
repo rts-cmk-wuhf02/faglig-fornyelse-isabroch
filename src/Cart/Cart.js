@@ -43,11 +43,15 @@ class CartEntry extends Component {
           <div className="cart-item__price-total">
             {priceToString(product.price * this.props.purchasingQuantity)}
           </div>
-          {this.props.purchasingQuantity > 1 && (
-            <div className="cart-item__price-per">
-              {priceToString(product.price)} per
-            </div>
-          )}
+          <div
+            className={`cart-item__price-per ${
+              this.props.purchasingQuantity === 1
+                ? `cart-item__price-per--hidden`
+                : ""
+            }`.trim()}
+          >
+            {priceToString(product.price)} per
+          </div>
         </div>
       </div>
     );
