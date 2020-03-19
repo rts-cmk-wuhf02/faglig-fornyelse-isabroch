@@ -4,5 +4,6 @@
 */
 
 export default function(number) {
-  return `${String(number / 100).replace(".", ",")} kr`;
+  const numberFormattedDanish = (number / 100).toLocaleString('da');
+  return `${numberFormattedDanish} kr`;
 }
