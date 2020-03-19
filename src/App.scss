@@ -10,14 +10,11 @@
 .product-list {
   order: 1;
   flex: 2;
-  min-width: 325px;
-  border-radius: var(--cornerRadius);
 }
 
-.cart-list {
+.cart {
   order: 2;
   flex: 1;
-  min-width: 375px;
 }
 
 .box {
