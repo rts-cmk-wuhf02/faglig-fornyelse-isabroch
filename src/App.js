@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import "./App.scss";
 import ProductList from "./ProductList/ProductList";
 import Cart from "./Cart/Cart";
@@ -60,20 +59,17 @@ export class App extends Component {
   render() {
     return (
       <main className="app-container">
-        <section className="box cart-list">
           <Cart
             products={this.state.products}
             cart={this.state.cart}
             updateCart={this.updateCart}
           />
-        </section>
-        <section className="box product-list">
+
           <ProductList
             products={this.state.products}
             cart={this.state.cart}
             updateCart={this.updateCart}
           />
-        </section>
       </main>
     );
   }
