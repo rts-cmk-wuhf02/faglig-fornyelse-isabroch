@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from 'react';
+
 import "./App.scss";
 import ProductList from "./ProductList/ProductList";
+import Cart from "./Cart/Cart";
 
-export class App extends React.Component {
+export class App extends Component {
   constructor(props) {
     super(props);
 
@@ -56,7 +58,8 @@ export class App extends React.Component {
   render() {
     return (
       <main className="app-container">
-        <section className="cart-list"></section>
+        <section className="cart-list">
+        </section>
         <section className="product-list">
           <ProductList
             products={this.state.products}

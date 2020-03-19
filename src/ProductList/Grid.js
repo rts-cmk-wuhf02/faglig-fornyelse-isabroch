@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Grid.scss';
 
-class Grid extends React.Component {
+class Grid extends Component {
   render() {
     return (
       <ul className="grid">

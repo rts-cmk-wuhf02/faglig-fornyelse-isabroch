@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 import "rc-input-number/assets/index.css";
 import InputNumber from "rc-input-number";
 import "./Product.scss";
 
-class Product extends React.Component {
+class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {

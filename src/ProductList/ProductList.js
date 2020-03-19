@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 import Product from "./Product";
 import Grid from "./Grid";
 
-export class ProductList extends React.Component {
+export class ProductList extends Component {
   render() {
     return (
       <Grid>
