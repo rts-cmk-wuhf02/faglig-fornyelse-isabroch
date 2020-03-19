@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "rc-input-number/assets/index.css";
 import InputNumber from "rc-input-number";
 import "./Cart.scss";
+import priceToString from "../priceToString";
 
 class CartEntry extends Component {
   updatePurchasingQuantity = value => {
@@ -13,45 +14,53 @@ class CartEntry extends Component {
   };
 
   render() {
+    const product = this.props.product;
+
     return (
       <div className="cart-item">
-        <img src="" alt="" className="cart-entry__image" />
-        <h3 className="cart-entry__name"></h3>
-        <div className="cart-entry__controls">
+        <img
+          src={`https://picsum.photos/seed/${product.id}/100/100`}
+          width="100"
+          height="100"
+          alt=""
+          className="cart-item__image"
+        />
+        <h3 className="cart-item__name">{product.name}</h3>
+        <div className="cart-item__controls">
           <InputNumber
             precision={0}
             min={0}
-            max={this.props.product.stock}
-            className="product-card__quantity"
+            max={product.stock}
+            className="cart-item__quantity"
             value={this.props.purchasingQuantity}
             onChange={this.updatePurchasingQuantity}
           />
-          <button className="cart-entry__link" onClick={this.removeItem}>
+          <button className="cart-item__link" onClick={this.removeItem}>
             Remove
           </button>
         </div>
-        <div className="cart-entry__price">
-          <span className="cart-entry__price-total"></span>
-          <span className="cart-entry__price-per"></span>
+        <div className="cart-item__price">
+          <div className="cart-item__price-total">
+            {priceToString(product.price * this.props.purchasingQuantity)}
+          </div>
+          {this.props.purchasingQuantity > 1 && (
+            <div className="cart-item__price-per">
+              {priceToString(product.price)} per
+            </div>
+          )}
         </div>
       </div>
     );
   }
 }
 
-export default class Cart extends Component {
+class CartItems extends Component {
   render() {
-    /* Props:
-    products
-    cart
-    updateCart
-    */
-
     let cartItems = <span className="cart-item">No items in cart yet.</span>;
 
     if (this.props.cart.length !== 0) {
       cartItems = (
-        <ul className="cart">
+        <ul className="cart-list">
           {this.props.cart.map(cartItem => {
             const matchingProductItem = this.props.products.filter(
               productItem => cartItem.id === productItem.id
@@ -71,5 +80,51 @@ export default class Cart extends Component {
     }
 
     return cartItems;
+  }
+}
+
+class CartCallToAction extends Component {
+  totalPrice = () => {
+    let totalPrice = 0;
+
+    for (let i = 0; i < this.props.cart.length; i++) {
+      const { id, quantity } = this.props.cart[i];
+      const { price } = this.props.products.filter(product => product.id == id)[0];
+
+      totalPrice += (price * quantity);
+    }
+
+    return totalPrice;
+  };
+
+  render() {
+    return (
+      <div className="cart-cta">
+        <h2 className="cart-cta__title">
+          Samlet beløb <span className="cart-cta__subtext">inkl. moms</span>
+        </h2>
+        <div className="cart-cta__price">
+          {priceToString(this.totalPrice())}
+        </div>
+        <button className="cart-cta__button">Buy me!</button>
+      </div>
+    );
+  }
+}
+
+export default class Cart extends Component {
+  render() {
+    /* Props:
+    products
+    cart
+    updateCart
+    */
+
+    return (
+      <section className="box cart">
+        <CartItems {...this.props} />
+        <CartCallToAction {...this.props} />
+      </section>
+    );
   }
 }
