@@ -94,7 +94,7 @@ class CartCallToAction extends Component {
     for (let i = 0; i < this.props.cart.length; i++) {
       const { id, quantity } = this.props.cart[i];
       const { price } = this.props.products.filter(
-        product => product.id == id
+        product => product.id === id
       )[0];
 
       totalPrice += price * quantity;
@@ -114,7 +114,7 @@ class CartCallToAction extends Component {
             {priceToString(this.totalPrice())}
           </div>
         </div>
-        <button className="cart-cta__button">Buy me!</button>
+        <button className="cart-cta__button" onClick={this.props.clearCart}>Buy me!</button>
       </div>
     );
   }

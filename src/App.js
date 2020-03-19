@@ -56,6 +56,10 @@ export class App extends Component {
     this.setState({ cart: cartData });
   };
 
+  clearCart = () => {
+    this.setState({cart: []})
+  }
+
   render() {
     return (
       <main className="app-container">
@@ -63,6 +67,7 @@ export class App extends Component {
             products={this.state.products}
             cart={this.state.cart}
             updateCart={this.updateCart}
+            clearCart={this.clearCart}
           />
 
           <ProductList
