@@ -26,6 +26,6 @@ Der er selvfølgelig andre værktøj der laver lignende ting, men der er mindre 
 - [React Lifecycles Method Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) til at bedre forstår hvornår de forskellige lifecycle events sker
 - [Flaviocopes: React, how to transfer props to child components](https://flaviocopes.com/react-pass-props-to-children/) et kort tutorial om et feature jeg var usikker om
 - [fake{JSON}](https://fakejson.com/) for mock data generation
-- [JSON Server](https://github.com/typicode/json-server) for hosting mock data during testing
+- [JSON Server](https://github.com/typicode/json-server) for hosting mock data during testing; see [my database](https://github.com/isabroch/shopData)
 - [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for better visual information about how React works on my project
 - [React Input Number Component](http://react-component.github.io/input-number/) because I didn't want to design my own number input. SOME functionality is different from handling normal inputs.
