@@ -23,7 +23,7 @@ Der er selvfølgelig andre værktøj der laver lignende ting, men der er mindre 
 - Kurser fra [ReactJS community resources](https://reactjs.org/community/courses.html)
 - Artiklen fra Sunil Sandhu, [I created the exact same app in React and Vue... (2019)](https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-2019-edition-42ba2cab9e56)
 - Artiklen fra Patricia Neil, [React VS Vue: Which is better for 2020?](https://medium.com/@patricianeil248/react-vs-vue-which-is-better-for-2020-c484f22c67a8)
-
+- [React Lifecycles Method Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - [fake{JSON}](https://fakejson.com/) for mock data generation
 - [JSON Server](https://github.com/typicode/json-server) for hosting mock data during testing
 - [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for better visual information about how React works on my project
