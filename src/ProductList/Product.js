@@ -7,21 +7,24 @@ class Product extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      purchasingQuantity: 1
+      purchasingQuantity: 1,
+      availableStock: this.props.existingStock
     };
   }
 
-  handleChange = value => {
+  updatePurchasingQuantity = value => {
     this.setState({ purchasingQuantity: value });
   };
 
-  callUpdateCart = event => {
+  callUpdateCart = () => {
     this.props.updateCart(this.props.productId, this.state.purchasingQuantity);
-    this.setState({purchasingQuantity: 1 });
+    this.setState({purchasingQuantity: 1});
+
+    this.setState((state, props) => ({availableStock: props.existingStock - props.reservedStock}))
   };
 
   render() {
-    const isOutOfStock = this.props.productStock === 0;
+    const isOutOfStock = this.state.availableStock === 0;
 
     return (
       <article
@@ -52,10 +55,10 @@ class Product extends React.Component {
             <InputNumber
               precision={0}
               min={1}
-              max={this.props.productStock}
+              max={this.state.availableStock}
               className="product-card__quantity"
               value={this.state.purchasingQuantity}
-              onChange={this.handleChange}
+              onChange={this.updatePurchasingQuantity}
               tabIndex={isOutOfStock ? -1 : 0}
             />
             <button

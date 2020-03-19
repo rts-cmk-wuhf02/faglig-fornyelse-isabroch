@@ -50,18 +50,17 @@ export class App extends React.Component {
       cartData[orderNumber].quantity = updatedQuantity;
     }
 
-    console.log(cartData);
-
     this.setState({ cart: cartData });
   };
 
   render() {
     return (
-      <main className="site-container">
+      <main className="app-container">
         <section className="cart-list"></section>
         <section className="product-list">
           <ProductList
             products={this.state.products}
+            cart={this.state.cart}
             updateCart={this.updateCart}
           />
         </section>

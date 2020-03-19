@@ -6,19 +6,26 @@ export class ProductList extends React.Component {
   render() {
     return (
       <Grid>
-        {this.props.products.map(item => {
-          const priceInDKK = String(item.price / 100).replace(".", ",");
+        {this.props.products.map(productItem => {
+          const priceInDKK = String(productItem.price / 100).replace(".", ",");
 
-          return  (
+          const matchingCartProduct = this.props.cart.filter(
+            cartItem => cartItem.id === productItem.id
+          )[0]
+
+          const tempReservedStock = matchingCartProduct === undefined ? 0 : matchingCartProduct.quantity;
+
+          return (
             <Product
-              key={item.id}
-              productName={item.name}
+              key={productItem.id}
+              productName={productItem.name}
               productPrice={priceInDKK}
-              productId={item.id}
-              productStock={item.stock}
+              productId={productItem.id}
+              existingStock={productItem.stock}
+              reservedStock={tempReservedStock}
               updateCart={this.props.updateCart}
             />
-          )
+          );
         })}
       </Grid>
     );
