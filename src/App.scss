@@ -18,12 +18,10 @@
   order: 2;
   flex: 1;
   min-width: 375px;
-  min-height: 100px;
 
   @media screen and (min-width: 788px) {
     top: var(--spacingM);
     position: sticky;
-    min-height: calc(100vh - var(--spacingL) * 2);
   }
 }
 
