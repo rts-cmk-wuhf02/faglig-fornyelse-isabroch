@@ -134,6 +134,8 @@
     background-color: rgb(184, 212, 117);
     cursor: pointer;
     transition: background-color 0.1s ease;
+    font-family: inherit;
+    font-weight: bold;
 
     &:hover,
     &:focus {
