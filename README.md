@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Faglig Fornyelse ft. React
 
-## Available Scripts
+## Produktet
+Jeg bygger et view af produktlistet og en indkøbskurv panel fra et e-commerce side. Jeg fokusere mig på kommunikation mellem komponenter. Den specifik funktionalitet jeg ville gerne uvikler er synkronisering mellem den forekomst af produktet i produktlistet og de produkter i indkøbskurv panelen. Så når man klikker knap på produkt til sende det videre til indkøbskurv, indkøbskurven er nemt opdateret.
 
-In the project directory, you can run:
+## Teknologi anvendt
+Jeg valgt at bygge mit produkt med **React**. \
+React er et JavaScript bibliotek udviklet af Facebook. Det er et værktøj til udvikling af komponenter til brugergrænseflader. React arbejder med modelen af et Virtual DOM. Det er et representationen af DOM der er gemt i hukommelse for hurtig udregning af logik. Ved at synkronisere den virkelig DOM til Virtual DOM, kan der minimiseres hvor mange gang 'reflows' (hvor browser skal igen udregne sidens layout) sker.
 
-### `npm start`
+Videre har jeg også brugt **Create React App**. \
+"Create React App" er et værktøj fra holdet bag React, der skaber en basic struktur for React projekter, og styrer alt i forhold til bundling og sammenstilling (som vi normalt ville styr med Webpack og/eller Gulp). Det giver mig lov til at fokusere på den vigtig i projektet: at lære React.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Hvorfor?
+Hvorfor React?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Når man søger på [Jobindex](https://www.jobindex.dk/) for arbejde i Danmark, der er et stor forskel i arbejde der søger efter udvikler med kendskab til React ([68 jobs](https://www.jobindex.dk/jobsoegning/danmark?q=react)) end til Vue ([28 jobs](https://www.jobindex.dk/jobsoegning/danmark?q=vue)). Det viser sig som en værdifuld evne mange arbejdsgivere er interesset i.
 
-### `npm test`
+Der er selvfølgelig andre værktøj der laver lignende ting, men der er mindre arbejdsmulighed og mindre online støtte for de værktøj i øjeblikket. Det er nemmere at lære et popular værktøj og, efter jeg har fået forståelse for det, applicer det på de andre ting hvis de kommer til at være vigtig i fremtiden.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Ressourcer
+- Brugt både tutorial og specifik dokumenation om forskellig funktionalitet fra [ReactJS docs](https://reactjs.org/docs/getting-started.html) (især 'Main Concepts')
+- I relation til mit brug af Create React App: [Create React App docs](https://create-react-app.dev/docs/getting-started)
+- Kurser fra [ReactJS community resources](https://reactjs.org/community/courses.html)
+- Artiklen fra Sunil Sandhu, [I created the exact same app in React and Vue... (2019)](https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-2019-edition-42ba2cab9e56)
+- Artiklen fra Patricia Neil, [React VS Vue: Which is better for 2020?](https://medium.com/@patricianeil248/react-vs-vue-which-is-better-for-2020-c484f22c67a8)
+- [React Lifecycles Method Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) til at bedre forstår hvornår de forskellige lifecycle events sker
+- [Flaviocopes: React, how to transfer props to child components](https://flaviocopes.com/react-pass-props-to-children/) et kort tutorial om et feature jeg var usikker om
+- [fake{JSON}](https://fakejson.com/) for mock data generation
+- [JSON Server](https://github.com/typicode/json-server) for hosting mock data during testing; see [my database](https://github.com/isabroch/shopData)
+- [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for better visual information about how React works on my project
+- [React Input Number Component](http://react-component.github.io/input-number/) because I didn't want to design my own number input. SOME functionality is different from handling normal inputs.
