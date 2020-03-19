@@ -1,12 +1,13 @@
 .product-card {
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: var(--cornerRadius);
   box-shadow: 2px 2px 4px rgba(9, 0, 31, 0.1);
+  background: white;
 
   &--no-stock {
     background: rgb(240, 240, 240);
     filter: grayscale(1);
-    opacity: 0.9;
+    opacity: 0.7;
   }
 
   &__image {
@@ -70,7 +71,7 @@
     flex: 1;
     border: 0;
     background-color: rgb(184, 212, 117);
-    border-radius: 3px;
+    border-radius: var(--cornerRadius);
     cursor: pointer;
     transition: background-color 0.1s ease;
 

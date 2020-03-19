@@ -1,7 +1,23 @@
+:root {
+  --brandColor: rgb(110, 174, 211);
+  --brandColorDark: rgb(69, 113, 170);
+  --spacingS: 10px;
+  --spacingM: 20px;
+  --spacingL: 40px;
+  --componentBackground:rgba(255, 255, 255, 0.25);
+  --cornerRadius: 5px;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--brandColor);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brandColor) var(--brandColorDark);
 }
 
 * {

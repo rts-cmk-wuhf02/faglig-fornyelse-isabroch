@@ -58,9 +58,10 @@ export class App extends Component {
   render() {
     return (
       <main className="app-container">
-        <section className="cart-list">
+        <section className="box cart-list">
+          <Cart></Cart>
         </section>
-        <section className="product-list">
+        <section className="box product-list">
           <ProductList
             products={this.state.products}
             cart={this.state.cart}

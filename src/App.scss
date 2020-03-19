@@ -2,22 +2,34 @@
   display: flex;
   flex-wrap: wrap-reverse;
   max-width: 1200px;
-  margin: 20px auto;
-
-  --spacing: 20px;
+  margin: 0 auto;
+  align-items: flex-end;
+  padding: var(--spacingL) var(--spacingM);
 }
 
 .product-list {
   order: 1;
   flex: 2;
   min-width: 325px;
-padding: var(--spacing);
+  border-radius: var(--cornerRadius);
 }
 
 .cart-list {
-padding: var(--spacing);
   order: 2;
   flex: 1;
-  min-width: 325px;
+  min-width: 375px;
   min-height: 100px;
+
+  @media screen and (min-width: 788px) {
+    top: var(--spacingM);
+    position: sticky;
+    min-height: calc(100vh - var(--spacingL) * 2);
+  }
+}
+
+.box {
+  background: var(--componentBackground);
+  padding: var(--spacingL);
+  border-radius: var(--cornerRadius);
+  margin: var(--spacingS);
 }
