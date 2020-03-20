@@ -16,7 +16,8 @@ class Product extends Component {
   };
 
   callUpdateCart = () => {
-    this.props.updateCart(this.props.productId, this.state.purchasingQuantity);
+
+    this.props.updateCart(this.props.productId, this.state.purchasingQuantity || 1);
     this.setState({purchasingQuantity: 1});
   };
 
