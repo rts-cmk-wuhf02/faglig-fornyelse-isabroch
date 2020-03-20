@@ -1,4 +1,4 @@
-# Faglig Fornyelse ft. React
+#
 
 ## Produktet
 Jeg bygger et view af produktlistet og en indkøbskurv panel fra et e-commerce side. Jeg fokusere mig på kommunikation mellem komponenter. Den specifik funktionalitet jeg ville gerne uvikler er synkronisering mellem den forekomst af produktet i produktlistet og de produkter i indkøbskurv panelen. Så når man klikker knap på produkt til sende det videre til indkøbskurv, indkøbskurven er nemt opdateret.
@@ -25,7 +25,7 @@ Der er selvfølgelig andre værktøj der laver lignende ting, men der er mindre 
 - Artiklen fra Patricia Neil, [React VS Vue: Which is better for 2020?](https://medium.com/@patricianeil248/react-vs-vue-which-is-better-for-2020-c484f22c67a8)
 - [React Lifecycles Method Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) til at bedre forstår hvornår de forskellige lifecycle events sker
 - [Flaviocopes: React, how to transfer props to child components](https://flaviocopes.com/react-pass-props-to-children/) et kort tutorial om et feature jeg var usikker om
-- [fake{JSON}](https://fakejson.com/) for mock data generation
-- [JSON Server](https://github.com/typicode/json-server) for hosting mock data during testing; see [my database](https://github.com/isabroch/shopData)
-- [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for better visual information about how React works on my project
-- [React Input Number Component](http://react-component.github.io/input-number/) because I didn't want to design my own number input. SOME functionality is different from handling normal inputs.
+- [fake{JSON}](https://fakejson.com/) for genering af mock data
+- [JSON Server](https://github.com/typicode/json-server) for at host min mock data; se [databasen](https://github.com/isabroch/shopData)
+- [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for nem visualisering af hvordan mit React komponenter virker
+- [React Input Number Component](http://react-component.github.io/input-number/) så jeg ikke behøver at selve design en number input, da jeg kan ikke lige browser defaults! Har LIDT forskellig håndtering iforhold til en almindelig input.
