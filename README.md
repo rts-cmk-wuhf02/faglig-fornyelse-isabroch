@@ -18,6 +18,41 @@ Når man søger på [Jobindex](https://www.jobindex.dk/) for arbejde i Danmark, 
 
 Der er selvfølgelig andre værktøj der laver lignende ting, men der er mindre arbejdsmulighed og mindre online støtte for de værktøj i øjeblikket. Det er nemmere at lære et popular værktøj og, efter jeg har fået forståelse for det, applicer det på de andre ting hvis de kommer til at være vigtig i fremtiden.
 
+### Hvorfor istedet for JS
+- Anden måde at tænk på web udvikling, da vi adskille i forhold til funktion istedet for language
+- Kan nem brug det lærte på ReactNative til udvikling af mobil app
+- Effektiv rendering af ændringer i HTML, det kun ændrer det der er behøvet
+- Bruger JSX, der hjælper mig at bedre visualisere og forstår hvor logik og markup er tilkynettet
+- Skal ikke tænke meget på compatibilitet fordi React håndtere det med deres script og library
+
+## Alternativer
+### Angular
+- Den NY Angular 2.0 (2016) men der også er AngularJS 1.0 (2010)
+- App udvikling framework
+- Udviklet af (primært) Google
+- Typescript baseret, kan lave ting komplicerede nogen gang
+- Bruger attributer i HTML som udløser Javascript delen
+- Open Source
+- Har NOGEN mobil frameworks, men er ikke lige så performant
+- Svært at lære fordi der er mange ting ikke set i normal JS
+- Næsten ALT du har brug for er allerede bygget ind, men betyder stor fil
+
+### Vue JS
+- Open Source
+- Udviklet af former Google udvikler
+- Tager koncepter fra både Angular 1.0 og React
+- Er faktisk mere performant i forhold til rerendering af komponenter
+- Nemt at integrere med eksistering kode
+- Små filstorrelse
+- Stadig separation of concerns af HTML, CSS, og JS inden for et fil
+
+### Hvorfor brug React alligevel?
+- Populær på nettet, betyder mere ressourcer og hjælp
+- Støttet af Facebook: så langt at Facebook bruger React, betyder de ville udvikle det til at være bedre og cutting edge
+- Startere med ingenting, så nemt at implementere
+- Job marked (jobindex.dk) - der er mere der søger for React kendskab
+- Bedste imlpementering for mobiludvikling, nemt at tage næste skridt til ReactNative
+
 ## Ressourcer
 - Brugt både tutorial og specifik dokumenation om forskellig funktionalitet fra [ReactJS docs](https://reactjs.org/docs/getting-started.html) (især 'Main Concepts')
 - I relation til mit brug af Create React App: [Create React App docs](https://create-react-app.dev/docs/getting-started)
