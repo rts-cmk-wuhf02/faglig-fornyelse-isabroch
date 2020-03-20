@@ -1,5 +1,6 @@
 # Faglig Fornyelse ft. React
 [Skoletube Video](https://www.skoletube.dk/video/5465342/8c3a85718f2c7bc7329bcdc500efdd30)
+[Ser produkt live](https://isabroch-learns-react.netlify.com/)
 
 ## Produktet
 Jeg bygger et view af produktlistet og en indkøbskurv panel fra et e-commerce side. Jeg fokusere mig på kommunikation mellem komponenter. Den specifik funktionalitet jeg ville gerne uvikler er synkronisering mellem den forekomst af produktet i produktlistet og de produkter i indkøbskurv panelen. Så når man klikker knap på produkt til sende det videre til indkøbskurv, indkøbskurven er nemt opdateret.
